@@ -34,3 +34,21 @@ body{
 .userflash{
     background-color: grey;
 }
+.btn {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn.active {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+body.game-over {
+  background-color: red;
+  transition: 0.2s;
+}
