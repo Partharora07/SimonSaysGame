@@ -5,36 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simon Says Game</title>
     <link rel="stylesheet" href="SimonSays.css">
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .scoreboard p {
+            font-size: 20px;
+            margin: 5px;
+        }
+
+        #start {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+
+        .game-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn#red { background-color: #f44336; }
+        .btn#green { background-color: #4CAF50; }
+        .btn#blue { background-color: #2196F3; }
+        .btn#yellow { background-color: #FFEB3B; }
+
+        .btn.active {
+            opacity: 0.6;
+            transform: scale(1.1);
+        }
+
+        body.game-over {
+            background-color: red;
+            transition: 0.2s;
+        }
+    </style>
 </head>
 <body>
-    <h1>Simon Says</h1>
-    <h2>Press any key to start!</h2>
-    <div class="button-container">
-        <div class="line-1">
-            <div class="btn yellow" type="button" id="yellow">1</div>
-            <div class="btn red" type="button" id="red">2</div>
-        </div>
-        <div class="line-2">
-            <div class="btn green" type="button" id="green">3</div>
-            <div class="btn blue" type="button" id="blue">4</div>
-        </div>
-        
-    </div>
+    <h1>Simon Says Game</h1>
+
     <div class="scoreboard">
-  <p id="score">Score: 0</p>
-  <p id="highScore">High Score: 0</p>
-</div>
+        <p id="score">Score: 0</p>
+        <p id="highScore">High Score: 0</p>
+        <p id="level">Level: 0</p>
+    </div>
 
-<button id="start">Start Game</button>
+    <button id="start">Start Game</button>
 
-<div class="game-buttons">
-  <button class="btn" id="red"></button>
-  <button class="btn" id="green"></button>
-  <button class="btn" id="blue"></button>
-  <button class="btn" id="yellow"></button>
-</div>
+    <div class="game-buttons">
+        <button class="btn" id="red"></button>
+        <button class="btn" id="green"></button>
+        <button class="btn" id="blue"></button>
+        <button class="btn" id="yellow"></button>
+    </div>
 
-
+    <!-- Link to external JavaScript -->
     <script src="SimonSays.js"></script>
 </body>
 </html>
